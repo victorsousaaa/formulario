@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="./img/BORCELLE.png" />
+    <link rel="stylesheet" href="style.css">
+    <title>OptimusTech</title>
+</head>
+<body>
+    <div class="container">
+        <h2>OptimusTech</h2>
+        <form id="jobApplicationForm">
+            <div class="form-group">
+                <label for="name">Nome:</label>
+                <input type="text" id="name" name="name" required>
+                <span class="error" id="nameError"></span>
+            </div>
+            <div class="form-group">
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required>
+                <span class="error" id="emailError"></span>
+            </div>
+            <div class="form-group">
+                <label for="phone">Telefone:</label>
+                <input type="tel" id="phone" name="phone">
+                <span class="error" id="phoneError"></span>
+            </div>
+            <div class="form-group">
+                <label for="position">Cargo:</label>
+                <select id="position" name="position" required>
+                    <option value="">Selecione um cargo</option>
+                    <option value="desenvolvedor">Desenvolvedor</option>
+                    <option value="designer">Designer</option>
+                    <option value="gerente">Gerente</option>
+                </select>
+                <span class="error" id="positionError"></span>
+            </div>
+            <div class="form-group">
+                <label for="resume">Enviar Currículo:</label>
+                <input type="file" id="resume" name="resume">
+            </div>
+            
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+
+    <script>
+       
+
+    document.getElementById("jobApplicationForm").addEventListener("submit", function(event) {
+
+    let name = document.getElementById("name").value;
+
+    let email = document.getElementById("email").value;
+
+    let phone = document.getElementById("phone").value;
+
+    let resume = document.getElementById("resume").value;
+
+ 
+
+    let emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+
+ 
+
+    let errors = [];
+
+ 
+
+    if (!name.trim()) {
+
+        errors.push("Nome é obrigatório.");
+
+    }
+
+ 
+
+    if (!email.match(emailPattern)) {
+
+        errors.push("Email inválido.");
+
+    }
+
+ 
+
+    if (!phone || phone.length > 11) {
+    errors.push("Número de telefone inválido. Digite até 11 dígitos.");
+}
+
+
+ 
+
+    if (!resume.endsWith(".pdf") && !resume.endsWith(".doc") && !resume.endsWith(".docx")) {
+
+        errors.push("Formato de currículo inválido. Apenas PDF, DOC e DOCX são aceitos.");
+
+    }
+
+ 
+
+    if (errors.length > 0) {
+
+        event.preventDefault();
+
+        alert(errors.join("\n"));
+
+    }
+
+});
+
+</script>
+</body>
+</html>

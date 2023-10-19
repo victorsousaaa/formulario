@@ -1,0 +1,107 @@
+/* Estilo para o corpo da página */
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('img/Design.png');
+    background-size: cover; /* Isso dimensiona a imagem para cobrir toda a área do elemento pai */
+    padding: 0;
+}
+
+/* Estilo para o contêiner do formulário */
+.container {
+    max-width: 400px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin-right: 350px;
+    margin-top: 30px;
+    
+}
+/* Estilo para o cabeçalho do formulário */
+h2 {
+    font-family: 'Alumni Sans Collegiate One', sans-serif;
+    font-family: 'Inter', sans-serif;
+    text-align: center;
+    color: #333;
+}
+
+/* Estilo para grupos de formulários */
+.form-group {
+    margin-bottom: 30px;
+}
+
+/* Estilo para rótulos */
+label {
+    display: block;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Estilo para campos de entrada de texto */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+.form-group input[type="file"] {
+    display: block;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+/* Estilo para o botão de envio de currículo */
+.form-group input[type="file"] + label {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+/* Estilo para o botão de envio de currículo quando hover */
+.form-group input[type="file"] + label:hover {
+    background-color: #45a049;
+}
+
+/* Estilo para botão de envio */
+button[type="submit"] {
+    background-color: #FF0000;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Estilo para mensagens de erro */
+.error {
+    color: #FF0000;
+    font-size: 14px;
+}
+
+/* Estilo para a borda do campo de entrada em foco */
+input:focus, select:focus, textarea:focus {
+    border: 2px solid #FF0000;
+}
+
+/* Estilo para opções do seletor */
+select option {
+    background-color: #fff;
+}
+
+/* Estilo para o fundo do botão quando hover */
+button[type="submit"]:hover {
+    background-color: #FF0000;
+}
